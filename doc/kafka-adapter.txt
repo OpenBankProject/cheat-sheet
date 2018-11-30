@@ -32,8 +32,14 @@ run Main
 Listen to the topics from the command line:
 
 
-kafka client consumer command (execute from downloaded kafka folder):
+kafka client commands (execute from downloaded kafka folder created by setup.sh kafka_xxxx):
 
- ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic to.obp.api.1.caseclass.OutboundGetBanks
+show all topics : 
+./bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+listen to some specific topic (e.g. from.obp.api.1.to.adapter.mf.caseclass.OutboundGetBanks):
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic from.obp.api.1.to.adapter.mf.caseclass.OutboundGetBanks
+ 
+ 
  
  
