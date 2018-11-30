@@ -91,5 +91,10 @@
             <artifactId>lift-util_${scala.library}</artifactId>
             <version>3.1.0-M3</version>
         </dependency>
+        <dependency>
+            <groupId>net.liftweb</groupId>
+            <artifactId>lift-mapper_${scala.version}</artifactId>
+            <version>${lift.version}</version>
+        </dependency>
     </dependencies>
 </project>

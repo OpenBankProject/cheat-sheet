@@ -1,0 +1,39 @@
+basic props for kafka in API default.props
+
+connector=kafka_vSept2018
+
+kafka.partitions=1
+kafka.group.id=obp.api.1
+api_instance_id=1
+kafka.bootstrap_hosts=localhost:9092
+kafka.client.id=obp.api.1
+
+
+Run Kafka on your local machines:
+
+In the API source folder  cd to src/main/scripts/kafka
+
+run:
+./setup.sh
+sudo ./kafka_start.sh
+
+
+generic scala adapter:
+
+get from here:
+
+copy example props to default.props as in API
+
+run Main
+
+https://gitlab-external.tesobe.com/twoelk/OBP-Adapter_generic.git
+
+
+Listen to the topics from the command line:
+
+
+kafka client consumer command (execute from downloaded kafka folder):
+
+ ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic to.obp.api.1.caseclass.OutboundGetBanks
+ 
+ 
